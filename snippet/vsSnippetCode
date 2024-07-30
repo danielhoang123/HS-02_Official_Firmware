@@ -1,0 +1,133 @@
+
+https://snippet-generator.app/
+
+==========kxnhda======================================
+#ifndef ${TM_FILENAME_BASE}_H__
+#define ${TM_FILENAME_BASE}_H__
+#include "dataAdapter.h"
+
+// include your Libraries here
+
+
+class ${TM_FILENAME_BASE}_Data: public Data_Adapter{
+  public:
+  // Add your declare here
+
+  ${TM_FILENAME_BASE}_Data();
+  virtual ~${TM_FILENAME_BASE}_Data(){};
+  bool getData();
+  bool init();
+  bool deInit();
+};
+
+extern ${TM_FILENAME_BASE}_Data ${1:NameDevice}_Device;
+#endif
+==========End kxnhda======================================
+
+==========kxncda======================================
+#include "${TM_FILENAME_BASE}.h"
+#include "MachTest_SP_IO.h"
+#include "debugkxn.h"
+
+${TM_FILENAME_BASE}_Data::${TM_FILENAME_BASE}_Data()
+{
+  this->nameDevice = "${1:NameDevice}";
+  this->timeInterval = 250;
+  this->valueDevice = "No device";
+  // Add your code here
+
+}
+
+bool ${TM_FILENAME_BASE}_Data::getData()
+{
+  // Add your code here
+  
+  return true;
+}
+
+bool ${TM_FILENAME_BASE}_Data::init()
+{
+  deInit();
+  // Add your code here
+  
+  return 1;
+}
+
+bool ${TM_FILENAME_BASE}_Data::deInit()
+{
+  // Add your code here
+
+  return 1;
+}
+
+${TM_FILENAME_BASE}_Data ${1:NameDevice}_Device;
+
+==========End kxncda======================================
+
+==========kxnhi2cd======================================
+#ifndef ${TM_FILENAME_BASE}_H__
+#define ${TM_FILENAME_BASE}_H__
+#include "Model_I2C_Device.h"
+
+// include your Libraries here
+
+
+class ${TM_FILENAME_BASE}_Data: public Model_I2C_Device{
+  public:
+  // Add your declare here
+
+  ${TM_FILENAME_BASE}_Data();
+  ~${TM_FILENAME_BASE}_Data();
+  bool getData();
+  bool init();
+  bool deInit();
+};
+
+extern ${TM_FILENAME_BASE}_Data device_${TM_FILENAME_BASE};
+#endif
+==========End kxnhi2cd======================================
+
+==========kxnci2cd======================================
+#include "${TM_FILENAME_BASE}.h"
+#include "debugkxn.h"
+
+${TM_FILENAME_BASE}_Data::${TM_FILENAME_BASE}_Data()
+{
+  this->nameDevice = "${1:NameDevice}";
+  this->timeInterval = 250;
+  this->valueDevice = "No device";
+  this->i2cAddress = ${2:0x68};
+  Set_HS_Code(${3:1518});
+  // Add your code here
+
+}
+
+${TM_FILENAME_BASE}_Data::~${TM_FILENAME_BASE}_Data()
+{
+  
+}
+
+bool ${TM_FILENAME_BASE}_Data::getData()
+{
+  // Add your code here
+  
+  return true;
+}
+
+bool ${TM_FILENAME_BASE}_Data::init()
+{
+  deInit();
+  // Add your code here
+  
+  return 1;
+}
+
+bool ${TM_FILENAME_BASE}_Data::deInit()
+{
+  // Add your code here
+
+  return 1;
+}
+
+${TM_FILENAME_BASE}_Data device_${TM_FILENAME_BASE};
+==========End kxnci2cd======================================

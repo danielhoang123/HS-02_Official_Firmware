@@ -1,0 +1,22 @@
+"Create Controller Device for Test": {
+    "prefix": "kxnhda",
+    "body": [
+        "#ifndef ${TM_FILENAME/[^0-9^a-z]//gi}_H__",
+        "#define ${TM_FILENAME/[^0-9^a-z]//gi}_H__",
+        "#include \"dataAdapter.h\"",
+        "",
+        "class ${1:NameDevice}_Data: public Data_Adapter{",
+        "  public:",
+        "  // Add your declare here",
+        "",
+        "  ${1:NameDevice}_Data();",
+        "  virtual ~${1:NameDevice}_Data(){};",
+        "  bool getData();",
+        "  bool init();",
+        "  bool deInit();",
+        "};",
+        "",
+        "#endif"
+    ],
+    "description": "Create Controller Device for Test"
+}

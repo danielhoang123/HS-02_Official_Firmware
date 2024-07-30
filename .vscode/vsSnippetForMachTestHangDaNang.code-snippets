@@ -1,0 +1,159 @@
+{
+	// Place your MachTestHangDaNang workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"Create header file Controller Device for Test": {
+		"prefix": "kxnhda",
+		"body": [
+		  "#ifndef ${TM_FILENAME_BASE}_H__",
+		  "#define ${TM_FILENAME_BASE}_H__",
+		  "#include \"dataAdapter.h\"",
+		  "",
+		  "// include your Libraries here",
+		  "",
+		  "",
+		  "class ${TM_FILENAME_BASE}_Data: public Data_Adapter{",
+		  "  public:",
+		  "  // Add your declare here",
+		  "",
+		  "  ${TM_FILENAME_BASE}_Data();",
+		  "  virtual ~${TM_FILENAME_BASE}_Data(){};",
+		  "  bool getData();",
+		  "  bool init();",
+		  "  bool deInit();",
+		  "};",
+		  "",
+		  "extern ${TM_FILENAME_BASE}_Data ${1:NameDevice}_Device;",
+		  "#endif"
+		],
+		"description": "Create header file Controller Device for Test"
+	  },
+	  "Create Cpp Controller Device for Test": {
+		"prefix": "kxncda",
+		"body": [
+		  "#include \"${TM_FILENAME_BASE}.h\"",
+		  "#include \"MachTest_SP_IO.h\"",
+		  "#include \"debugkxn.h\"",
+		  "",
+		  "${TM_FILENAME_BASE}_Data::${TM_FILENAME_BASE}_Data()",
+		  "{",
+		  "  this->nameDevice = \"${1:NameDevice}\";",
+		  "  this->timeInterval = 250;",
+		  "  this->valueDevice = \"No device\";",
+		  "  // Add your code here",
+		  "}",
+		  "",
+		  "bool ${TM_FILENAME_BASE}_Data::getData()",
+		  "{",
+		  "  // Add your code here",
+		  "  ",
+		  "  return true;",
+		  "}",
+		  "",
+		  "bool ${TM_FILENAME_BASE}_Data::init()",
+		  "{",
+		  "  deInit();",
+		  "  // Add your code here",
+		  "  ",
+		  "  return 1;",
+		  "}",
+		  "",
+		  "bool ${TM_FILENAME_BASE}_Data::deInit()",
+		  "{",
+		  "  // Add your code here",
+		  "  return 1;",
+		  "}",
+		  "",
+		  "${TM_FILENAME_BASE}_Data ${1:NameDevice}_Device;"
+		],
+		"description": "Create Cpp Controller Device for Test"
+	  },
+	  "Create Header file Controller I2C Device for Test": {
+		"prefix": "kxnhi2cd",
+		"body": [
+		  "#ifndef ${TM_FILENAME_BASE}_H__",
+		  "#define ${TM_FILENAME_BASE}_H__",
+		  "#include \"Model_I2C_Device.h\"",
+		  "",
+		  "// include your Libraries here",
+		  "",
+		  "",
+		  "class ${TM_FILENAME_BASE}_Data: public Model_I2C_Device{",
+		  "  public:",
+		  "  // Add your declare here",
+		  "",
+		  "  ${TM_FILENAME_BASE}_Data();",
+		  "  ~${TM_FILENAME_BASE}_Data();",
+		  "  bool getData();",
+		  "  bool init();",
+		  "  bool deInit();",
+		  "};",
+		  "",
+		  "extern ${TM_FILENAME_BASE}_Data device_${TM_FILENAME_BASE};",
+		  "#endif"
+		],
+		"description": "Create header file Controller I2C Device for Test"
+	  },
+	  "Create Cpp Controller I2C Device for Test": {
+		"prefix": "kxnci2cd",
+		"body": [
+		  "#include \"${TM_FILENAME_BASE}.h\"",
+		  "#include \"debugkxn.h\"",
+		  "",
+		  "${TM_FILENAME_BASE}_Data::${TM_FILENAME_BASE}_Data()",
+		  "{",
+		  "  this->nameDevice = \"${1:NameDevice}\";",
+		  "  this->timeInterval = 250;",
+		  "  this->valueDevice = \"No device\";",
+		  "  this->Add_AddressList(${2:0x68});",
+		  "  this->Add_HsCode(${3:1518});",
+		  "  // Add your code here",
+		  "",
+		  "}",
+		  "",
+		  "${TM_FILENAME_BASE}_Data::~${TM_FILENAME_BASE}_Data()",
+		  "{",
+		  "  ",
+		  "}",
+		  "",
+		  "bool ${TM_FILENAME_BASE}_Data::getData()",
+		  "{",
+		  "  // Add your code here",
+		  "  this->valueDevice = \"device value\";",
+		  "  ",
+		  "  return true;",
+		  "}",
+		  "",
+		  "bool ${TM_FILENAME_BASE}_Data::init()",
+		  "{",
+		  "  deInit();",
+		  "  // Add your code here",
+		  "  ",
+		  "  return 1;",
+		  "}",
+		  "",
+		  "bool ${TM_FILENAME_BASE}_Data::deInit()",
+		  "{",
+		  "  // Add your code here",
+		  "",
+		  "  return 1;",
+		  "}",
+		  "",
+		  "${TM_FILENAME_BASE}_Data device_${TM_FILENAME_BASE};"
+		],
+		"description": "Create Cpp Controller I2C Device for Test"
+	  }
+}

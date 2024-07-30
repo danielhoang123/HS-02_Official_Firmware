@@ -1,0 +1,22 @@
+#######################################
+# Syntax Coloring Map For Hshopvn_Pzem004_V2
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+Hshopvn_Pzem004t_V2				KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+begin							KEYWORD2
+getData							KEYWORD2
+setTimeout						KEYWORD2
+resetEnergy						KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+pzem_info						LITERAL1

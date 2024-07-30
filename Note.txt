@@ -1,0 +1,15 @@
+Author: Quoc Hoang 
+Date: 09/12/2023
+
+- Nội dung chỉnh sửa của ngày 09/12/2023:
+
+	+ Chỉnh lại code đọc LM35, nhận ra là cảm biến bắt đầu đọc sai khi mà có thêm chức năng đọc giá trị của Pin,
+	xem lại thử phần đó có phải hay không
+	
+	+ Thêm code test cho Servo, giải thuật như sau:
+		Đang ở góc bao nhiêu độ thì hiển thị lên LCD bấy nhiêu. VD: Đang ở 0 độ thì 0 độ, 180 thì 180 độ
+	
+	+ Siêu âm cho đọc chậm hơn một chút xíu, (300ms thật sự là hơi chậm :)) ) nên cho đọc nhanh hơn để có thể sử dụng
+	bộ lọc Kalman hiệu quả, nhìn từ bây giờ mới thấy là bộ lọc Kalman bị ảnh hưởng rất lớn từ khả năng lấy giá trị của
+	Vi Điều Khiển, nếu như lấy giá trị đọc không đủ nhanh thì giá trị tăng rất chậm, từ đó gần như việc sử dụng bộ lọc
+	Kalman gần như là vô nghĩa :))

@@ -1,0 +1,16 @@
+{
+  "name": "Makerlabvn_I2C_Motor_Driver",
+  "keywords": "Makerlabvn_I2C_Motor_Driver, I2C_Motor_Driver, Motor_Driver, Driver, Makerlab.vn",
+  "description": "A library for communicating with MKL-M10 I2C motor control module",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/makerlabvn/Makerlabvn_I2C_Motor_Driver.git"
+  },
+  "frameworks": "arduino",
+  "platforms":
+  [
+    "atmelavr",
+    "espressif8266"
+  ]
+}

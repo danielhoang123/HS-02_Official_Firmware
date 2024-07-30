@@ -1,0 +1,32 @@
+#######################################
+# Syntax Coloring Map For Makerlabvn_I2C_Motor_Driver
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+Makerlabvn_I2C_Motor_Driver				KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+begin					KEYWORD2
+SetS1                   KEYWORD2
+SetS2                   KEYWORD2
+writeS1                 KEYWORD2
+writeS2                 KEYWORD2
+freeS1                  KEYWORD2
+freeS2                  KEYWORD2
+S1						KEYWORD2
+S2						KEYWORD2
+writeMA					KEYWORD2
+writeMB					KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+I2C_MOTOR_DRIVER_CODE_FAIL						LITERAL1
+I2C_MOTOR_DRIVER_CODE_SUCCESS                   LITERAL1
+I2C_MOTOR_DRIVER_CODE_NOT_CONNECT               LITERAL1
+I2C_MOTOR_DRIVER_CODE_MANY_CONNECT              LITERAL1
