@@ -12,6 +12,8 @@ public:
   // Add your declare here
   
   MFRC522 * rfid;
+  MFRC522::MIFARE_Key key;
+  
   Controller_RC522_Data();
   virtual ~Controller_RC522_Data(){};
   bool getData();

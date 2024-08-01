@@ -42,9 +42,8 @@ bool Controller_DS1307_Data::init()
   // this->now = this->rtc1->now();
   now = this->rtc1->now();
   int a = int(now.hour());
-  int b = int(now.minute());
 
-  if (a != 7 && b != 5)
+  if (a != 7)
   {
     this->rtc1->adjust(DateTime(2023, 4, 23, 7, 5, 0));
   }
