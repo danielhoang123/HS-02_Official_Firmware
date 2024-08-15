@@ -4,12 +4,11 @@
 
 // include your Libraries here
 #include <Adafruit_BMP085.h>
-
-class Controller_BMP180_Data: public Model_I2C_Device{
-  public:
+class Controller_BMP180_Data : public Model_I2C_Device
+{
+public:
   // Add your declare here
   Adafruit_BMP085 * bmp;
-
   Controller_BMP180_Data();
   ~Controller_BMP180_Data();
 
