@@ -18,7 +18,6 @@ Controller_LCD3f_Data::~Controller_LCD3f_Data()
 bool Controller_LCD3f_Data::getData()
 {
     // Add your code here
-    this->valueDevice = "device value";
 
     this->lcd3f->setCursor(0, 0); // Cột 2 dòng 0
     this->lcd3f->print("Test LCD w/ 0x3f");
@@ -39,6 +38,7 @@ bool Controller_LCD3f_Data::init()
     this->lcd3f->init();
     this->lcd3f->backlight();
     this->lcd3f->clear();
+    this->valueDevice = "Running";
     return 1;
 }
 
