@@ -58,7 +58,7 @@
 #include "Controller_PN532.h"
 #include "Controller_GY_HMC588L.h"
 #include "Controller_AMG8833.h"
-
+#include "Controller_LCD3f.h"
 bool flag = 0, flag1 = 0;
 
 // Khai báo biến và cấu hình bộ lọc Kalman
@@ -315,6 +315,7 @@ void Add_I2C_Device()
   Manager_I2C_Device.myI2C_Devices_List.add(&device_Controller_GY_HMC588L); //DONE (Special)
   Manager_I2C_Device.myI2C_Devices_List.add(&device_Controller_AMG8833);
   Manager_I2C_Device.myI2C_Devices_List.add(&device_Controller_MAX44009);
+  Manager_I2C_Device.myI2C_Devices_List.add(&device_Controller_LCD3f);
 }
 
 // ---------------------------------------------------------------------------------------
