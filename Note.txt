@@ -13,3 +13,15 @@ Date: 09/12/2023
 	bộ lọc Kalman hiệu quả, nhìn từ bây giờ mới thấy là bộ lọc Kalman bị ảnh hưởng rất lớn từ khả năng lấy giá trị của
 	Vi Điều Khiển, nếu như lấy giá trị đọc không đủ nhanh thì giá trị tăng rất chậm, từ đó gần như việc sử dụng bộ lọc
 	Kalman gần như là vô nghĩa :))
+
+English Translation VIA GOOGLE:
+
+Author: Quoc Hoang 
+Date: 09/12/2023 
+	- Edited content of 09/12/2023: 
+	
+		+ Adjust the LM35 reading code, realize that the sensor starts to read incorrectly when there is an additional function to read the value of the Pin, check if that part is correct or not 
+
+		+ Add test code for Servo, the algorithm is as follows: The angle is displayed on the LCD at the same degree. For example: At 0 degrees then 0 degrees, 180 then 180 degrees 
+
+		+ Ultrasound reads a little slower, (300ms is really a bit slow :)) ) should read faster to be able to use the Kalman filter effectively, looking from now on we can see that the Kalman filter is greatly affected by the ability to get the value of the 				  Microcontroller, if the reading value is not fast enough, the value increases very slowly, from there almost using the filter Kalman is almost meaningless :))
